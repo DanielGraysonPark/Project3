@@ -1,0 +1,32 @@
+
+.btn-container {
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    color: white;  
+  }
+  .btns {
+    padding-top: 5px;
+    border: 5 px solid #ccc;  
+    display: flex;
+    justify-content: center;
+    background-color:  #635994;
+    color: white;
+    border-radius: 5px;
+    margin: 3px;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    justify-content: space-between 5px;
+  }
+  .btns:hover {
+    background-color: #05A5ED;
+     
+  }
