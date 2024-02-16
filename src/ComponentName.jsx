@@ -5,10 +5,12 @@ import { useState } from "react";
 
 
 //functional component - must be Capitalised
-function ComponentName(props){
+function ComponentName({onAttempt, label}) {
     return(
-        <div onClick={props.onAttempt} className="btns">
-           <h3></h3>{props.label}
+        
+        <div onClick={onAttempt} className="btns">
+            {label}
+    
         </div>
     )
 }

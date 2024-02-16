@@ -23,9 +23,13 @@ function App() {
       
 
   ]);
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
 function onAttempt(attempt){
-  if (questions[0].checkAnswer(attempt)){
+  if (questions[currentQuestion].checkAnswer(attempt)){
     alert("Correct!")
+    setCurrentQuestion((currentQuestion + 1) % questions.length);
   }
   else{
     alert("Wrong!")
@@ -36,9 +40,9 @@ function onAttempt(attempt){
     <div className="App">
       <header className="App-header">
         <h1>Trivial Quiz &#x1F50D;</h1>
-        <h1>{questions[0].question}</h1>
+        <h1>{questions[currentQuestion].question}</h1>
         <div className="btn-container">
-          {questions[0].shuffleOptions().map((option) => {
+          {questions[currentQuestion].shuffleOptions().map((option) => {
             return (
              <ComponentName label={option} onAttempt={() => onAttempt(option)}/>
             
