@@ -5,7 +5,12 @@ import React, { useState } from 'react';
 import Question from './Model/Question';
 import ComponentName from './ComponentName';
 
+
+
 function App() {
+
+  
+
   const [questions, setQuestions] = useState([
      new Question ("what is the biggest animal in the world?",
      "easy",
@@ -39,6 +44,15 @@ function onAttempt(attempt){
   return (
     <div className="App">
       <header className="App-header">
+      <><img src={logo} className="App-logo" alt="logo" /><a
+    className="App-link"
+    href="https://reactjs.org"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+      Learn React
+    </a></>
+
         <h1>Trivial Quiz &#x1F50D;</h1>
         <h1>{questions[currentQuestion].question}</h1>
         <div className="btn-container">
@@ -55,4 +69,3 @@ function onAttempt(attempt){
 }
 
 export default App;
-//  <Question question={Question} /> 
